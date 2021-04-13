@@ -11,6 +11,8 @@
 
 	<context:component-scan base-package="com.writesourcer" />
 
+<!-- Writers Group Services-->
+
 	<bean id="sfGroupsService"
 		class="com.writesourcer.services.ScienceFictionService">
 	</bean>
@@ -18,6 +20,9 @@
 	<bean id="sfanGroupsService"
 		  class="com.writesourcer.services.ScienceFantasyService">
 	</bean>
+
+
+<!--Writers Group Classes-->
 
 	<bean id="generalFictionGroups"
 		class="com.writesourcer.models.GeneralFictionGroups">
@@ -35,6 +40,7 @@
 	<bean id="scienceFictionGroups"
 		class="com.writesourcer.models.ScienceFictionGroups">
 		<constructor-arg ref="sfGroupsService"/>
+		<property name="sfGroupsService" ref="sfGroupsService"></property>
 	</bean>
 
 </beans>

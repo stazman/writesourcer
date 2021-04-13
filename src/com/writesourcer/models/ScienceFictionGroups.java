@@ -18,4 +18,12 @@ public class ScienceFictionGroups implements WritersGroup {
     public String listGroups() {
         return sfserv.serviceMessage();
     }
+
+    public ScienceFictionService getSfGroupsService() {
+        return sfserv;
+    }
+
+    public void setSfGroupsService(ScienceFictionService sfserv) {
+        this.sfserv = sfserv;
+    }
 }
