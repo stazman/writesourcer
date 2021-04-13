@@ -11,26 +11,30 @@
 
 	<context:component-scan base-package="com.writesourcer" />
 
-	<bean id="writersGroupService"
+	<bean id="sfGroupsService"
 		class="com.writesourcer.services.ScienceFictionService">
 	</bean>
 
+	<bean id="sfanGroupsService"
+		  class="com.writesourcer.services.ScienceFantasyService">
+	</bean>
 
 	<bean id="generalFictionGroups"
 		class="com.writesourcer.models.GeneralFictionGroups">
 	</bean>
 	<bean id="historicalFictionGroups"
-		  class="com.writesourcer.models.HistoricalFictionGroups">
+		class="com.writesourcer.models.HistoricalFictionGroups">
 	</bean>
 	<bean id="nonFictionGroups"
-		  class="com.writesourcer.models.NonFictionGroups">
+		class="com.writesourcer.models.NonFictionGroups">
 	</bean>
 	<bean id="scienceFantasyGroups"
-		  class="com.writesourcer.models.ScienceFantasyGroups">
+		class="com.writesourcer.models.ScienceFantasyGroups">
+		<constructor-arg ref="sfanGroupsService"/>
 	</bean>
 	<bean id="scienceFictionGroups"
-		  class="com.writesourcer.models.ScienceFictionGroups">
-		<constructor-arg ref="writersGroupService"/>
+		class="com.writesourcer.models.ScienceFictionGroups">
+		<constructor-arg ref="sfGroupsService"/>
 	</bean>
 
 </beans>
