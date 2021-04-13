@@ -11,10 +11,16 @@ public class MainApp {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
         //retrieve bean from Spring container
-        WritersGroup wg = context.getBean("scienceFictionGroups", WritersGroup.class);
+        WritersGroup wgsf = context.getBean("scienceFictionGroups", WritersGroup.class);
+        WritersGroup wgsfan = context.getBean("scienceFantasyGroups", WritersGroup.class);
 
         //call methods on the bean
-        System.out.println(wg.joinRequest());
+        System.out.println(wgsf.joinRequest());
+        System.out.println(wgsfan.joinRequest());
+
+        System.out.println(wgsf.listGroups());
+        System.out.println(wgsfan.listGroups());
+
 
         //close the context
         context.close();

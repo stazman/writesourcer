@@ -6,8 +6,8 @@ public class ScienceFictionGroups implements WritersGroup {
 
     private ScienceFictionService sfserv;
 
-    public ScienceFictionGroups(ScienceFictionService sfserv) {
-        this.sfserv = sfserv;
+    public ScienceFictionGroups(ScienceFictionService theSfserv) {
+        sfserv = theSfserv;
     }
 
     public String joinRequest(){
@@ -16,6 +16,6 @@ public class ScienceFictionGroups implements WritersGroup {
 
     @Override
     public String listGroups() {
-        return "This is a list of all the Science Fiction groups you can join.";
+        return sfserv.serviceMessage();
     }
 }
