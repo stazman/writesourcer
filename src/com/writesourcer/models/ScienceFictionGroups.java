@@ -26,4 +26,12 @@ public class ScienceFictionGroups extends WritersGroups implements WritersGroup 
     public void setSfGroupsService(ScienceFictionService sfserv) {
         this.sfserv = sfserv;
     }
+
+    private void startupTest() {
+        System.out.println("This is a custom startup lifecycle method being executed.");
+    }
+
+    private void destroyTest() {
+        System.out.println("This is a custom destroy lifecycle method being executed.");
+    }
 }
