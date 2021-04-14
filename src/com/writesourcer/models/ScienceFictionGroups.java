@@ -2,7 +2,7 @@ package com.writesourcer.models;
 
 import com.writesourcer.services.ScienceFictionService;
 
-public class ScienceFictionGroups implements WritersGroup {
+public class ScienceFictionGroups extends WritersGroups implements WritersGroup {
 
     private ScienceFictionService sfserv;
 
