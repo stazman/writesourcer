@@ -11,9 +11,7 @@
 
 	<context:component-scan base-package="com.writesourcer" />
 
-	<context:property-placeholder location="classpath:sfgs.properties"/>
-
-	<!-- Writers Group Services-->
+<!-- Writers Group Services-->
 
 	<bean id="sfGroupsService"
 		class="com.writesourcer.services.ScienceFictionService">
@@ -41,13 +39,15 @@
 	</bean>
 	<bean id="scienceFictionGroups"
 		class="com.writesourcer.models.ScienceFictionGroups"
-		scope="prototype">
+		  scope="prototype">
 		<constructor-arg ref="sfGroupsService"/>
 		<property name="sfGroupsService" ref="sfGroupsService"></property>
-		<property name="moderator" value="${sfgs.moderator}"></property>
-		<property name="name" value="${sfgs.name}"></property>
-		<property name="description" value="${sfgs.description}"></property>
+		<property name="moderator" value="None"></property>
+		<property name="name" value="Science Fiction Groups"></property>
+		<property name="description" value="Here you can find groups to help you improve your Science Fiction works."></property>
 	</bean>
+
+	<context:property-placeholder location="classpath:sfgs.properties"/>
 
 </beans>
 
