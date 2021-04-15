@@ -21,6 +21,11 @@ public class ServiceMainApp {
         System.out.println(sfgs.joinRequest());
         System.out.println(sfgs.listGroups());
 
+        System.out.println(sfgs.getModerator());
+        System.out.println(sfgs.getName());
+        System.out.println(sfgs.getDescription());
+
+
 
         // close the context
 

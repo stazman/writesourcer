@@ -3,7 +3,7 @@ package com.writesourcer.models;
 import com.writesourcer.services.ScienceFictionService;
 import org.springframework.stereotype.Component;
 
-@Component("scienceFictionGroups")
+@Component
 public class ScienceFictionGroups extends WritersGroups implements WritersGroup {
 
     private ScienceFictionService sfserv;
