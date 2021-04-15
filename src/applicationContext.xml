@@ -39,15 +39,15 @@
 		class="com.writesourcer.models.ScienceFantasyGroups">
 		<constructor-arg ref="sfanGroupsService"/>
 	</bean>
-	<bean id="scienceFictionGroups"
-		class="com.writesourcer.models.ScienceFictionGroups"
-		scope="prototype">
-		<constructor-arg ref="sfGroupsService"/>
-		<property name="sfGroupsService" ref="sfGroupsService"></property>
-		<property name="moderator" value="${sfgs.moderator}"></property>
-		<property name="name" value="${sfgs.name}"></property>
-		<property name="description" value="${sfgs.description}"></property>
-	</bean>
+<!--	<bean id="scienceFictionGroups"-->
+<!--		class="com.writesourcer.models.ScienceFictionGroups"-->
+<!--		scope="prototype">-->
+<!--		<constructor-arg ref="sfGroupsService"/>-->
+<!--		<property name="sfGroupsService" ref="sfGroupsService"></property>-->
+<!--		<property name="moderator" value="${sfgs.moderator}"></property>-->
+<!--		<property name="name" value="${sfgs.name}"></property>-->
+<!--		<property name="description" value="${sfgs.description}"></property>-->
+<!--	</bean>-->
 
 </beans>
 
