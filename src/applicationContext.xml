@@ -7,51 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- add entry to enable component scanning -->
-
 	<context:component-scan base-package="com.writesourcer" />
 
-	<context:property-placeholder location="classpath:sfgs.properties"/>
-
-	<!-- Writers Group Services-->
-
-	<bean id="sfGroupsService"
-		class="com.writesourcer.services.ScienceFictionService">
-	</bean>
-
-	<bean id="sfanGroupsService"
-		  class="com.writesourcer.services.ScienceFantasyService">
-	</bean>
-
-
-<!--Writers Group Classes-->
-
-	<bean id="generalFictionGroups"
-		class="com.writesourcer.models.GeneralFictionGroups">
-	</bean>
-	<bean id="historicalFictionGroups"
-		class="com.writesourcer.models.HistoricalFictionGroups">
-	</bean>
-	<bean id="nonFictionGroups"
-		class="com.writesourcer.models.NonFictionGroups">
-	</bean>
-	<bean id="scienceFantasyGroups"
-		class="com.writesourcer.models.ScienceFantasyGroups">
-		<constructor-arg ref="sfanGroupsService"/>
-	</bean>
-<!--	<bean id="scienceFictionGroups"-->
-<!--		class="com.writesourcer.models.ScienceFictionGroups"-->
-<!--		scope="prototype">-->
-<!--		<constructor-arg ref="sfGroupsService"/>-->
-<!--		<property name="sfGroupsService" ref="sfGroupsService"></property>-->
-<!--		<property name="moderator" value="${sfgs.moderator}"></property>-->
-<!--		<property name="name" value="${sfgs.name}"></property>-->
-<!--		<property name="description" value="${sfgs.description}"></property>-->
-<!--	</bean>-->
-
 </beans>
-
-
-
 
 
