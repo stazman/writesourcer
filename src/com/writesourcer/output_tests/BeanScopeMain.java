@@ -1,5 +1,6 @@
-package com.writesourcer.models;
+package com.writesourcer.output_tests;
 
+import com.writesourcer.models.ScienceFictionGroups;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanScopeMain {
@@ -7,7 +8,7 @@ public class BeanScopeMain {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+                new ClassPathXmlApplicationContext("configs/beanScope-applicationContext.xml");
 
         ScienceFictionGroups sfwg = context.getBean("scienceFictionGroups", ScienceFictionGroups.class);
 

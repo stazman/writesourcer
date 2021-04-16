@@ -1,5 +1,6 @@
-package com.writesourcer.models;
+package com.writesourcer.output_tests;
 
+import com.writesourcer.models.WritersGroup;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
@@ -8,7 +9,7 @@ public class MainApp {
 
         //load the Spring Configuration path
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("configs/applicationContext.xml");
 
         //retrieve bean from Spring container
         WritersGroup wgsf = context.getBean("scienceFictionGroups", WritersGroup.class);

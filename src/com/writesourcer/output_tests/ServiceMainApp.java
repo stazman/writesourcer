@@ -1,6 +1,6 @@
-package com.writesourcer.models;
+package com.writesourcer.output_tests;
 
-import com.writesourcer.services.ScienceFictionService;
+import com.writesourcer.models.ScienceFictionGroups;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ServiceMainApp {
@@ -10,7 +10,7 @@ public class ServiceMainApp {
         //load the spring configuration file
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("configs/applicationContext.xml");
 
         // retrieve bean from spring container
 
@@ -21,9 +21,9 @@ public class ServiceMainApp {
         System.out.println(sfgs.joinRequest());
         System.out.println(sfgs.listGroups());
 
-        System.out.println(sfgs.getModerator());
-        System.out.println(sfgs.getName());
-        System.out.println(sfgs.getDescription());
+//        System.out.println(sfgs.getModerator());
+//        System.out.println(sfgs.getName());
+//        System.out.println(sfgs.getDescription());
 
 
 

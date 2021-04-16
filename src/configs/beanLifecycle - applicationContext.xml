@@ -11,7 +11,7 @@
 
 	<context:component-scan base-package="com.writesourcer" />
 
-	<context:property-placeholder location="classpath:sfgs.properties"/>
+	<context:property-placeholder location="classpath:configs/sfgs.properties"/>
 
 	<!-- Writers Group Services-->
 

@@ -41,13 +41,13 @@
 		class="com.writesourcer.models.ScienceFictionGroups"
 		  scope="prototype">
 		<constructor-arg ref="sfGroupsService"/>
-		<property name="sfGroupsService" ref="sfGroupsService"></property>
-		<property name="moderator" value="None"></property>
-		<property name="name" value="Science Fiction Groups"></property>
-		<property name="description" value="Here you can find groups to help you improve your Science Fiction works."></property>
+<!--		<property name="sfGroupsService" ref="sfGroupsService"></property>-->
+<!--		<property name="moderator" value="None"></property>-->
+<!--		<property name="name" value="Science Fiction Groups"></property>-->
+<!--		<property name="description" value="Here you can find groups to help you improve your Science Fiction works."></property>-->
 	</bean>
 
-	<context:property-placeholder location="classpath:sfgs.properties"/>
+	<context:property-placeholder location="classpath:configs/sfgs.properties"/>
 
 </beans>
 
