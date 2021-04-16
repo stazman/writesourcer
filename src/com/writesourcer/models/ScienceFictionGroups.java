@@ -9,9 +9,12 @@ public class ScienceFictionGroups implements WritersGroup  {
 
     private WritersGroupService wgserv;
 
+    public ScienceFictionGroups() {
+    }
+
     @Autowired
-    public ScienceFictionGroups(WritersGroupService thewgserv) {
-        wgserv = thewgserv;
+    public void setWgserv(WritersGroupService wgserv) {
+        this.wgserv = wgserv;
     }
 
     @Override
