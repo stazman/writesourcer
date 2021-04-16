@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Unused Code:
+
+
+
+		<!--	<context:property-placeholder location="classpath:sfgs.properties"/>-->
+
+
+<!--&lt;!&ndash;Writers Group Classes&ndash;&gt;-->
+
+<!--	<bean id="writersGroups"-->
+<!--		class="com.writesourcer.models.WritersGroups">-->
+<!--	</bean>-->
+
+<!--	<bean id="generalFictionGroups"-->
+<!--		class="com.writesourcer.models.GeneralFictionGroups">-->
+<!--	</bean>-->
+<!--	<bean id="historicalFictionGroups"-->
+<!--		class="com.writesourcer.models.HistoricalFictionGroups">-->
+<!--	</bean>-->
+<!--	<bean id="nonFictionGroups"-->
+<!--		class="com.writesourcer.models.NonFictionGroups">-->
+<!--	</bean>-->
+<!--&lt;!&ndash;&lt;!&ndash;	<bean id="scienceFantasyGroups"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;		class="com.writesourcer.models.ScienceFantasyGroups">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;		<constructor-arg ref="sfanGroupsService"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;	</bean>&ndash;&gt;-->
+<!--	<bean id="scienceFictionGroups"-->
+<!--		class="com.writesourcer.models.ScienceFictionGroups"-->
+<!--		scope="prototype">-->
+<!--		<constructor-arg ref="sfGroupsService"/>-->
+<!--&lt;!&ndash;		<property name="sfGroupsService" ref="sfGroupsService"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;		<property name="moderator" value="${sfgs.moderator}"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;		<property name="name" value="${sfgs.name}"></property>&ndash;&gt;-->
+<!--&lt;!&ndash;		<property name="description" value="${sfgs.description}"></property>&ndash;&gt;-->
+<!--	</bean>-->

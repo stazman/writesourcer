@@ -11,12 +11,12 @@
 
 	<context:component-scan base-package="com.writesourcer" />
 
-	<context:property-placeholder location="classpath:configs/sfgs.properties"/>
+	<context:property-placeholder location="classpath:configs/wg.properties"/>
 
 	<!-- Writers Group Services-->
 
 	<bean id="sfGroupsService"
-		class="com.writesourcer.services.ScienceFictionService">
+		class="com.writesourcer.services.ScienceFictionGroupsService">
 	</bean>
 
 <!--Writers Group Classes-->

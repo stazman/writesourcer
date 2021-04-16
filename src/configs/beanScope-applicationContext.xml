@@ -14,7 +14,7 @@
 <!-- Writers Group Services-->
 
 	<bean id="sfGroupsService"
-		class="com.writesourcer.services.ScienceFictionService">
+		class="com.writesourcer.services.ScienceFictionGroupsService">
 	</bean>
 
 	<bean id="sfanGroupsService"
@@ -47,7 +47,7 @@
 <!--		<property name="description" value="Here you can find groups to help you improve your Science Fiction works."></property>-->
 	</bean>
 
-	<context:property-placeholder location="classpath:configs/sfgs.properties"/>
+	<context:property-placeholder location="classpath:configs/wg.properties"/>
 
 </beans>
 
