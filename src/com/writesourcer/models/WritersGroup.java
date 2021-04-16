@@ -2,8 +2,10 @@ package com.writesourcer.models;
 
 public interface WritersGroup {
 
-    public String joinRequest();
+    String joinRequest();
 
-    public String listGroups();
+    String listGroups();
+
+    String getServiceMessage();
 
 }

@@ -2,6 +2,6 @@ package com.writesourcer.services;
 
 public interface WritersGroupService {
 
-    public String serviceMessage();
+    public String getMessage();
 
 }

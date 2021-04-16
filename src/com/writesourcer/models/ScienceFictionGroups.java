@@ -1,32 +1,32 @@
 package com.writesourcer.models;
 
-import com.writesourcer.services.ScienceFictionService;
+import com.writesourcer.services.WritersGroupService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ScienceFictionGroups extends WritersGroups implements WritersGroup {
+public class ScienceFictionGroups implements WritersGroup  {
 
-    private ScienceFictionService sfserv;
+    private WritersGroupService wgserv;
 
-    public ScienceFictionGroups(ScienceFictionService theSfserv) {
-        sfserv = theSfserv;
+    @Autowired
+    public ScienceFictionGroups(WritersGroupService thewgserv) {
+        wgserv = thewgserv;
     }
 
+    @Override
     public String joinRequest(){
         return "Join one of our fine Science Fiction groups to improve your writing!";
     }
 
     @Override
     public String listGroups() {
-        return sfserv.serviceMessage();
+        return "Here is a list of all of our fine Science Fiction Groups.";
     }
 
-    public ScienceFictionService getSfGroupsService() {
-        return sfserv;
-    }
-
-    public void setSfGroupsService(ScienceFictionService sfserv) {
-        this.sfserv = sfserv;
+    @Override
+    public String getServiceMessage() {
+        return wgserv.getMessage();
     }
 
     private void startupTest() {
