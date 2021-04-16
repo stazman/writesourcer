@@ -2,6 +2,7 @@ package com.writesourcer.models;
 
 import com.writesourcer.services.WritersGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,7 @@ public class ScienceFictionGroups implements WritersGroup  {
     }
 
     @Autowired
+    @Qualifier("scienceFictionGroupsService")
     public void setWgserv(WritersGroupService wgserv) {
         this.wgserv = wgserv;
     }

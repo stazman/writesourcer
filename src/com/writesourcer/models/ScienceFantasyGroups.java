@@ -1,14 +1,19 @@
 package com.writesourcer.models;
 
-import com.writesourcer.services.ScienceFantasyService;
-import com.writesourcer.services.ScienceFictionService;
+import com.writesourcer.services.WritersGroupService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ScienceFantasyGroups implements WritersGroup {
 
-    private ScienceFantasyService sfanserv;
+    private WritersGroupService wgserv;
 
-    public ScienceFantasyGroups(ScienceFantasyService theSfanserv) {
-        sfanserv = theSfanserv;
+    @Autowired
+    @Qualifier("scienceFantasyGroupsService")
+    public void setWgserv(WritersGroupService thewgserv) {
+        this.wgserv = thewgserv;
     }
 
     @Override
@@ -18,6 +23,11 @@ public class ScienceFantasyGroups implements WritersGroup {
 
     @Override
     public String listGroups() {
-        return sfanserv.serviceMessage();
+        return "Here is a list of all of our fine Science Fantasy Groups.";
+    }
+
+    @Override
+    public String getServiceMessage() {
+        return wgserv.getMessage();
     }
 }

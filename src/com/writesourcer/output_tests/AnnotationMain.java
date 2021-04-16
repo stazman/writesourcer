@@ -9,7 +9,7 @@ public class AnnotationMain {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("configs/applicationContext.xml");
 
-        WritersGroup wg = context.getBean("scienceFictionGroups", WritersGroup.class);
+        WritersGroup wg = context.getBean("scienceFantasyGroups", WritersGroup.class);
 
         System.out.println(wg.joinRequest());
 
