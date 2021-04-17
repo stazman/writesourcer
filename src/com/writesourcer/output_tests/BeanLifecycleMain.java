@@ -8,7 +8,7 @@ public class BeanLifecycleMain {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("configs/beanLifecycle - applicationContext.xml");
+                new ClassPathXmlApplicationContext("com/writesourcer/configs/beanLifecycle - applicationContext.xml");
 
         ScienceFictionGroups sfgs = context.getBean("scienceFictionGroups", ScienceFictionGroups.class);
 

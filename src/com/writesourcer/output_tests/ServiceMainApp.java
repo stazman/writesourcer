@@ -10,7 +10,7 @@ public class ServiceMainApp {
         //load the spring configuration file
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("configs/applicationContext.xml");
+                new ClassPathXmlApplicationContext("com/writesourcer/configs/applicationContext.xml");
 
         // retrieve bean from spring container
 

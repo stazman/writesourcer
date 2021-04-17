@@ -8,7 +8,7 @@ public class BeanScopeMain {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("configs/beanScope-applicationContext.xml");
+                new ClassPathXmlApplicationContext("com/writesourcer/configs/beanScope-applicationContext.xml");
 
         ScienceFictionGroups sfwg = context.getBean("scienceFictionGroups", ScienceFictionGroups.class);
 
