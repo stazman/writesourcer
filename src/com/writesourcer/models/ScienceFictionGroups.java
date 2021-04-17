@@ -2,15 +2,12 @@ package com.writesourcer.models;
 
 import com.writesourcer.services.WritersGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-//@Scope("prototype")
 public class ScienceFictionGroups implements WritersGroup  {
 
     @Value("${wg.moderator}")
@@ -22,12 +19,35 @@ public class ScienceFictionGroups implements WritersGroup  {
     @Value("${wg.description}")
     private String description;
 
-
     private WritersGroupService wgserv;
 
     @Autowired
     public ScienceFictionGroups(WritersGroupService wgserv) {
         this.wgserv = wgserv;
+    }
+
+    public String getModerator() {
+        return moderator;
+    }
+
+    public void setModerator(String moderator) {
+        this.moderator = moderator;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
