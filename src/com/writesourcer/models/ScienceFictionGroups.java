@@ -25,12 +25,8 @@ public class ScienceFictionGroups implements WritersGroup  {
 
     private WritersGroupService wgserv;
 
-    public ScienceFictionGroups() {
-    }
-
     @Autowired
-    @Qualifier("scienceFictionGroupsService")
-    public void setWgserv(WritersGroupService wgserv) {
+    public ScienceFictionGroups(WritersGroupService wgserv) {
         this.wgserv = wgserv;
     }
 

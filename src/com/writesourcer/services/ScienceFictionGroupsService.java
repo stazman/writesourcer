@@ -1,8 +1,8 @@
 package com.writesourcer.services;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class ScienceFictionGroupsService implements WritersGroupService {
 
     @Override
