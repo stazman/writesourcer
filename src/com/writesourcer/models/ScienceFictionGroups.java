@@ -3,11 +3,18 @@ package com.writesourcer.models;
 import com.writesourcer.services.WritersGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
+@Scope("singleton")
+
+
+//Note: the PostDestroy method will not be output unless the singleton scope is explicitly shown
+
+
 public class ScienceFictionGroups implements WritersGroup  {
 
     @Value("${wg.moderator}")
