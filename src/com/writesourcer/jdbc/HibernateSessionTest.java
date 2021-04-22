@@ -21,7 +21,7 @@ public class HibernateSessionTest {
 		
 		try {
 			
-			User tempUser = new User("Joe", "Smith", "jsmith@gmail.com", "JS2021%");
+			User tempUser = new User("Joe1", "Joe", "Smith", "jsmith@yahoo.com", "JS2021%");
 			
 			session.beginTransaction();
 			

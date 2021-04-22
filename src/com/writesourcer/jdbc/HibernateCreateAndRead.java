@@ -19,23 +19,28 @@ public class HibernateCreateAndRead {
 		
 		try {
 			
-			User sam = new User("Sam", "Ham", "sham@hsu.edu", "Sham2021%");
+			User f = new User("Tom1", "Tom", "Thom", "Tthom@yahoo.com", "Tom2021%");
 			
 			session.beginTransaction();
 			
-			session.save(sam);
+			session.save(f);
 			
 			session.getTransaction().commit();
+			
 			
 			session = factory.getCurrentSession();
 			
 			session.beginTransaction();
 			
-			User getSam = session.get(User.class, sam.getId());
+			User getF = session.get(User.class, f.getId());
 			
-			session.getTransaction().commit();			
+			System.out.println(f.getId());
 			
-			System.out.println(getSam);
+			session.getTransaction().commit();
+			
+			System.out.println("Complete new user: " + getF);
+			
+			System.out.println(getF);
 			
 		} catch(Exception e) {
 			
