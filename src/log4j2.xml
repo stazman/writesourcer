@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <Configuration monitorInterval="60">
+	
+	<Properties>
+		<Property name="log-path">PropertiesConfiguration</Property>
+	</Properties>
+	
+	<Appenders>
+		<Console name="Console-Appender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</pattern>>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+	
+	<Loggers>
+		<Logger name="org.hibernate.SQL" level="debug" additivity="false">
+		<AppenderRef ref="Console-Appender"/>
+			</Logger>
+				<Logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
+					<AppenderRef ref="Console-Appender"/>
+			</Logger>
+			<Root level="info">
+				<AppenderRef ref="Console-Appender"/>
+			</Root>
+	</Loggers>
+</Configuration> -->
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+ --><Configuration status="DEBUG">
+    <Properties>
+        <Property name="APP_NAME">MyCoolApp</Property>
+        <Property name="BASE_PACKAGE">my.cool.package</Property>
+        <Property name="LOG_DIR">${env:LOG_ROOT:-logs}</Property>
+        <Property name="LOG_PATTERN">%d [%t] %-5level %c{1.}:%L:%M | %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="AppLogFile" fileName="${LOG_DIR}/${APP_NAME}.log" filePattern="${LOG_DIR}/archive/${APP_NAME}.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="${BASE_PACKAGE}" level="INFO">
+            <AppenderRef ref="AppLogFile"/>
+        </Logger>
+
+        <Root level="TRACE">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
