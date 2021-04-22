@@ -47,11 +47,10 @@ public class UserProfile {
 	@Column(name="instagram")
 	private String instagram;
 
-	public UserProfile(int id, String bio, String favoriteAuthors, String favoriteGenres, String favoriteWorks,
+	public UserProfile(String bio, String favoriteAuthors, String favoriteGenres, String favoriteWorks,
 			String hobbiesAndInterests, String youTubeChannel, String website, String facebook, String twitter,
 			String instagram) {
 		super();
-		this.id = id;
 		this.bio = bio;
 		this.favoriteAuthors = favoriteAuthors;
 		this.favoriteGenres = favoriteGenres;
