@@ -1,7 +1,5 @@
 package com.writesourcer.jdbc;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,6 +16,9 @@ public class CreateWithOneToOne {
 		SessionFactory factory = new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(User.class)
+				
+				//This child class was needed though it wasn't used because of the existing association:
+				
 				.addAnnotatedClass(UserProfile.class)
 				.buildSessionFactory();
 			

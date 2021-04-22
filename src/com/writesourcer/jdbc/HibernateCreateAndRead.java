@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.writesourcer.models.User;
+import com.writesourcer.models.UserProfile;
 
 public class HibernateCreateAndRead {
 	
@@ -13,13 +14,14 @@ public class HibernateCreateAndRead {
 		SessionFactory factory = new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(User.class)
+				.addAnnotatedClass(UserProfile.class)
 				.buildSessionFactory();
 		
 		Session session = factory.getCurrentSession();
 		
 		try {
 			
-			User f = new User("Tom1", "Tom", "Thom", "Tthom@yahoo.com", "Tom2021%");
+			User f = new User("joeintheknow", "Joe", "Flow", "jflow@yahoo.com", "joe2021%");
 			
 			session.beginTransaction();
 			
