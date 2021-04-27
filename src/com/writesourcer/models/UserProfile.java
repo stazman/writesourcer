@@ -1,10 +1,13 @@
 package com.writesourcer.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -46,7 +49,18 @@ public class UserProfile {
 	
 	@Column(name="instagram")
 	private String instagram;
+	
+	
+//	@OneToOne(mappedBy="userProfile", cascade=CascadeType.ALL)
+//	@JoinColumn(name="user_profile")
+//	public User user;
 
+	@OneToOne(mappedBy="userProfile", cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
+				CascadeType.REFRESH})
+	@JoinColumn(name="user_profile")
+	public User user;
+	
+	
 	public UserProfile(String bio, String favoriteAuthors, String favoriteGenres, String favoriteWorks,
 			String hobbiesAndInterests, String youTubeChannel, String website, String facebook, String twitter,
 			String instagram) {
@@ -66,7 +80,6 @@ public class UserProfile {
 	public UserProfile() {
 		
 	}
-	
 
 	public int getId() {
 		return id;
@@ -154,6 +167,16 @@ public class UserProfile {
 
 	public void setInstagram(String instagram) {
 		this.instagram = instagram;
+	}
+	
+	
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override
