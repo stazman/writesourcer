@@ -5,8 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/writersGroupMain")
 public class WritersGroupsController {
 
 	@RequestMapping("/showNewGroupForm")
@@ -17,9 +19,12 @@ public class WritersGroupsController {
 	}
 	
 	@RequestMapping("/processNewGroup")
-	public String makeCaps(HttpServletRequest req, Model model) {
+	public String processNewGroup(	
+		@RequestParam("groupModerator") String theName,
+		Model model) {
 		
-		String theName = req.getParameter("groupModerator");
+		//This line is no longer needed, with @RequestParam
+//		String theName = req.getParameter("groupModerator");
 				
 		theName = theName.toUpperCase();
 		

@@ -20,7 +20,7 @@
 	
 	<br><br>
 	
-	<a href="showNewGroupForm">
+	<a href="writersGroupMain/showNewGroupForm">
 		Create a Writer's Group
 	</a>
 
