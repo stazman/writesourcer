@@ -17,6 +17,8 @@ public class AnnotationMain {
 
         System.out.println(wg.getServiceMessage());
 
+        
+        context.close();
 
     }
 }
