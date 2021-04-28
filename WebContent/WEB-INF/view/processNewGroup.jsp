@@ -8,6 +8,8 @@
 </head>
 <body>
 
+	<p>${message}</p>
+	<br><br>
 	<p>Group Moderator: ${param.groupModerator}</p>
 	<br><br>
 	<p>Group Name: ${param.groupName}</p>
